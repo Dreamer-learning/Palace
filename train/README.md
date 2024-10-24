@@ -1,4 +1,4 @@
-The training process includes 4 parts:
+# The training process includes 4 parts:
 
 ## 1. Topic detector
 

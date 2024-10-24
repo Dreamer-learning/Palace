@@ -1,4 +1,4 @@
-This folder is for handling the dataset and obtaining data related to training. It includes  `splitting the dataset`, `building a memory bank`, and `extracting persona triples`.
+This folder is for cleaning and processing the raw data to generate the train_dataset and test_dataset needed for our framework.
 
 MSC Dataset : [Link](https://arxiv.org/pdf/2107.07567) 
 

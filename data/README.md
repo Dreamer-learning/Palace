@@ -3,6 +3,8 @@ This folder is for handling the dataset and obtaining data related to training. 
 MSC Dataset : [Link](https://arxiv.org/pdf/2107.07567) 
 
 DuLeMon Dataset : [Link](https://arxiv.org/abs/2203.05797)
+
+You can also download the processed dataset here : [Link]()
 ## 1. Data Process
 
 ## 2. Get history Memory

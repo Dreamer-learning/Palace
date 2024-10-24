@@ -1,7 +1,7 @@
 import json
 import copy
 original_dataset = []
-path = "/home/liudongshuo/rebuttal/DuLeMon/" # your dataset path
+path = "" # your dataset path
 mode = "both" # choose SELF or BOTH in DuLeMon
 type_ = "dev" # choose train, test or dev
 path = path + mode + "/" + type_ + ".json" # concat path
@@ -40,12 +40,9 @@ for conversation in original_dataset:
                     personas[0].append(p.strip(" "))
                 else:
                     personas[0].append(p.split(":")[1].strip(" "))
-
         else:
             raise TypeError("Unknown mode")
-
-
-
+            
         dataset.append({
             "query": query,
             "response": golden_response,
@@ -53,10 +50,9 @@ for conversation in original_dataset:
             "init_personas": personas
         })
 
-
         conversation_history.append("User: " + query)
         conversation_history.append("ChatBot: " + golden_response)
 
-output_path = "/home/liudongshuo/rebuttal/both_dev.json" # your output path
+output_path = "" # your output path
 with open(output_path,'w',encoding='utf-8') as f:
     f.write(json.dumps(dataset, indent=4, ensure_ascii=False))

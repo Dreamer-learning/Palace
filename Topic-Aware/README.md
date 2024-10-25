@@ -7,3 +7,9 @@ This module will handle the `"context"` field in the dataset, retrieving and sor
 You can run:
 
 `bash topic_detector/topic_detector.sh`
+
+## 2. Retrieval long-term history and re-rank
+
+You can run:
+
+`bash`

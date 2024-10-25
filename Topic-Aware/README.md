@@ -5,4 +5,5 @@ This module will handle the `"context"` field in the dataset, retrieving and sor
 ## 1. Train topic detector
 
 You can run:
-`bash topic`
+
+`bash topic_detector/topic_detector.sh`

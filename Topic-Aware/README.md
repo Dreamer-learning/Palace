@@ -1,6 +1,6 @@
 # The Topic-Aware Memory Bank in PALACE
 
-This module will handle the `"context"` field in the dataset, retrieving and sorting the dialogue history from previous sessions, and training the `topic detector` to process the dialogue history of the current session.
+This module will handle the `"context"` field in the dataset, retrieving and sorting the dialogue history from previous sessions, and training the `topic detector` to process the dialogue history of the current session. After executing the code in the current folder, two new fields, `"long_memory"` and `"short_memory"` will be added to the original dataset.
 
 ## 1. Train topic detector
 

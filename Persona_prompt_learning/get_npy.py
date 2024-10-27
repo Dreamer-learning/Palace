@@ -49,13 +49,13 @@ def filter_kg(persona_kg, relations_dict):
 
 def get_entity_link():
     entity_link = {}
-    with open("/home/liudongshuo/dialogue_kg/entity_matching_persona_history_with_summary.json",'r',encoding='utf-8') as f:
+    with open("./dialogue_kg/entity_matching_persona_history_with_summary.json",'r',encoding='utf-8') as f:
         entity_context = json.load(f)
 
-    with open("/home/liudongshuo/dialogue_kg/entity_matching_persona_history_with_summary_last_session.json",'r',encoding='utf-8') as f:
+    with open("./dialogue_kg/entity_matching_persona_history_with_summary_last_session.json",'r',encoding='utf-8') as f:
         entity_context_last_summary = json.load(f)
 
-    with open("/home/liudongshuo/dialogue_kg/entity_matching.json",'r',encoding='utf-8') as f:
+    with open("./dialogue_kg/entity_matching.json",'r',encoding='utf-8') as f:
         entity_persona = json.load(f)
     
     for key, value in entity_context.items():
@@ -73,13 +73,13 @@ def get_entity_link():
 
 
 def get_entity_link_valid():
-    with open("/home/liudongshuo/dialogue_kg/entity_matching_valid.json",'r',encoding='utf-8') as f:
+    with open("./dialogue_kg/entity_matching_valid.json",'r',encoding='utf-8') as f:
         entity_context = json.load(f)
     return entity_context
 
 
 def get_entity_link_test():
-    with open("/home/liudongshuo/dialogue_kg/entity_matching_test.json",'r',encoding='utf-8') as f:
+    with open("./dialogue_kg/entity_matching_test.json",'r',encoding='utf-8') as f:
         entity_context = json.load(f)
     return entity_context
 
@@ -230,7 +230,7 @@ class embed(nn.Module):
     def __init__(self, ) -> None:
         super().__init__()
         self.model = AutoModelForCausalLM.from_pretrained("/home/data/public/llama2", trust_remote_code=True, device_map = 'auto')
-        #self.model = AutoModelForCausalLM.from_pretrained("/home/liudongshuo/chatglm3-6b", trust_remote_code=True, device_map = 'auto')
+        #self.model = AutoModelForCausalLM.from_pretrained("./chatglm3-6b", trust_remote_code=True, device_map = 'auto')
         #self.device = "cuda:3"
         self.model_tokenizer = AutoTokenizer.from_pretrained("/home/data/public/llama2", trust_remote_code=True)
 
@@ -261,9 +261,9 @@ class embed(nn.Module):
         return fisrt_larst_avg_status
 
 def main():
-    with open("/home/liudongshuo/new_agent/session_4/test_data_with_context_and_memory.json",'r',encoding='utf-8') as f:
+    with open("./new_agent/session_4/test_data_with_context_and_memory.json",'r',encoding='utf-8') as f:
         dataset = json.load(f)
-    with open("/home/liudongshuo/dialogue_kg/peacok_triple_dict.json",'r',encoding='utf-8') as f:
+    with open("./dialogue_kg/peacok_triple_dict.json",'r',encoding='utf-8') as f:
         persona_kg = json.load(f)
     entity_link = get_entity_link()
     relations_dict = get_relations_dict()
@@ -284,9 +284,9 @@ def main():
                 node2id[node] = len(node2id)
                 embedding = model(node)
                 node_npy.append(embedding)
-    with open("/home/liudongshuo/vector_library/data_llama/node2id_train.json",'w',encoding='utf-8') as f:
+    with open("./vector_library/data_llama/node2id_train.json",'w',encoding='utf-8') as f:
         f.write(json.dumps(node2id, indent=4, ensure_ascii=False))
-    np.save("/home/liudongshuo/vector_library/data_llama/node_train.npy", node_npy)"""
+    np.save("./vector_library/data_llama/node_train.npy", node_npy)"""
 
         query = data['query']
         if query not in query2id.keys():
@@ -298,20 +298,20 @@ def main():
         #    context2id[context] = len(context2id)
         #    embedding = model(data, "relevant_context")
         #    context_npy.append(embedding)
-    with open("/home/liudongshuo/vector_library/session_4/data_llama/query2id_test.json",'w',encoding='utf-8') as f:
+    with open("./vector_library/session_4/data_llama/query2id_test.json",'w',encoding='utf-8') as f:
         f.write(json.dumps(query2id, indent=4, ensure_ascii=False))
-    #with open("/home/liudongshuo/vector_library/data_llama/context2id_train.json",'w',encoding='utf-8') as f:
+    #with open("./vector_library/data_llama/context2id_train.json",'w',encoding='utf-8') as f:
     #    f.write(json.dumps(context2id, indent=4, ensure_ascii=False))
-    np.save('/home/liudongshuo/vector_library/session_4/data_llama/query_driven_test.npy',query_npy)
-    #np.save('/home/liudongshuo/vector_library/data_llama/context_npy_train.npy',context_npy)
+    np.save('./vector_library/session_4/data_llama/query_driven_test.npy',query_npy)
+    #np.save('./vector_library/data_llama/context_npy_train.npy',context_npy)
     """    response = data['response']
         if response not in response2id.keys():
             response2id[response] = len(response2id)
             embedding = model(data, 'response')
             response_npy.append(embedding)
-    with open("/home/liudongshuo/vector_library/response2id_train.json",'w',encoding='utf-8') as f:
+    with open("./vector_library/response2id_train.json",'w',encoding='utf-8') as f:
         f.write(json.dumps(response2id, indent=4, ensure_ascii=False))
-    np.save('/home/liudongshuo/vector_library/response_train.npy',response_npy)"""
+    np.save('./vector_library/response_train.npy',response_npy)"""
 
 
 

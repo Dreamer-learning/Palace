@@ -90,7 +90,7 @@ if __name__ == '__main__':
                         short_memory.append(memory_bank)
                     else:
                         short_memory = []
-                tmp_data['long_memory'] = ["USER: " + context.split("[SEP]")[0] + " CHATBOT: " + context.split("[SEP]")[1]  for context in short_memory]
+                tmp_data['short_memory'] = ["USER: " + context.split("[SEP]")[0] + " CHATBOT: " + context.split("[SEP]")[1]  for context in short_memory]
                 res.append(tmp_data)
 
             output_path = args.output_dir + "/session_" + str(s) + "/" + mode + "_processed.json"

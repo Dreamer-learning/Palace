@@ -507,8 +507,6 @@ def main():
             if isinstance(target, torch.nn.Linear):
                 in_features, out_features = target.in_features, target.out_features
                 new_module = LinearWithLora(adapter_name = 'default', in_features = in_features, out_features = out_features, r = 16, lora_alpha=32, lora_dropout=0.1).to(target.weight.device)
-                for name, p in new_module.named_parameters():
-                    p.requires_grad = False
                 _replace_module(parent, target_name, new_module, target)  
     
     #model = load_checkpoint(model= model)

@@ -17,7 +17,6 @@ import warnings
 from typing import Optional, List
 import re
 from vae import VAE
-from embedding_llama import Embedding
 import argparse
 
 def save_checkpoint(model, optimizer, cur_epoch, save_path):

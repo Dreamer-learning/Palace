@@ -10,9 +10,9 @@ the format of JSON files is :
 `  
 {
   
-  "I also do gymnastics, I love it": "<I, like_activity, gymnastics>",    .#"query/context/personas": <persona triples>
+    "I also do gymnastics, I love it": "<I, like_activity, gymnastics>",    .#"query/context/personas": <persona triples>
   
-  ...
+    ...
   
 }
 `

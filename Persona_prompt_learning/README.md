@@ -23,7 +23,8 @@ the format of persona_triple.json is
         "i am an actor who play my part", # entity
         "characteristic", # relation
         "complicent" # entity
-    ]
+    ],
+    ...
 ]
 `
 

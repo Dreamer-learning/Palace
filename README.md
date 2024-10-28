@@ -10,7 +10,7 @@ Thank you for your interest in our work.
 
 4. Finally, we train the persona prompt learning, which can be found in folder `\ppl` 
 
-For evaluation, you can use the `.generate` method in the code to generate the corresponding responses, and we use `nlg_eval` for assessment[Link](https://github.com/Maluuba/nlg-eval).
+For evaluation, you can use the `.generate` method in the code to generate the corresponding responses, and we use `nlg_eval` for assessment [Link](https://github.com/Maluuba/nlg-eval).
 
 
 

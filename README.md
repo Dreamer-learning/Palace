@@ -6,9 +6,9 @@ Thank you for your interest in our work.
 
 2. Then you need to run the `/Topic-Aware folder` to filter the historical information from the dataset.
 
-3. Next, perform VAE-LORA training on different backbones, as detailed in the `vae-lora` folder.
+3. Next, perform VAE-LORA training on different backbones, as detailed in the `VAE-LoRA` folder.
 
-4. Finally, we train the persona prompt learning, which can be found in folder `\ppl` 
+4. Finally, we train the persona prompt learning, which can be found in folder `\Persona_prompt_learning` 
 
 For evaluation, you can use the `.generate` method in the code to generate the corresponding responses, and we use `nlg_eval` for assessment [Link](https://github.com/Maluuba/nlg-eval).
 

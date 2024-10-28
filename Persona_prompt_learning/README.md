@@ -11,6 +11,8 @@ the format of JSON files is :
   "query/context/personas": <persona triples>
 }
 `
-## 2. Initialize representation 
+## 2. knowledge graph link
+You can run
+## 3. Initialize representation 
 
-## 3. training
+## 4. training

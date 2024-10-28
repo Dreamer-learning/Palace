@@ -17,9 +17,9 @@ def get_relations_dict():
 
 def main():
     retrieval = BiEncoderRetriever()
-    with open("/home/liudongshuo/dialogue_kg/peacok_triple.json",'r',encoding='utf-8') as f:
+    with open("./peacok_triple.json",'r',encoding='utf-8') as f:
         kg = json.load(f)
-    with open("/home/liudongshuo/dialogue_kg/peacok_triple_dict.json",'r',encoding='utf-8') as f:
+    with open("./peacok_triple_dict.json",'r',encoding='utf-8') as f:
         kg_head = json.load(f)
 
     head = list(kg_head.keys())    
@@ -38,7 +38,7 @@ def main():
     encode_summaries = retrieval.encode_summaries(list(head))
     encode_summaries = encode_summaries.cpu().numpy()
 
-    with open("/home/liudongshuo/entity_link/session_5/test_for_linker.json",'r',encoding='utf-8') as f:
+    with open("./session_5/test.json",'r',encoding='utf-8') as f: # original dataset
         dataset = json.load(f)
     
     res = {}
@@ -76,7 +76,7 @@ def main():
                         memory_retrieved_triple = retrieval.retrieve_top_summaries(question = persona, summaries=list(kg_triple_sentence[memory_retrieved_query[0]]), topk = 20)
                         res[persona] = memory_retrieved_triple
         
-    with open("/home/liudongshuo/entity_link/session_5/peacok_linked_query_and_persona_test.json",'w',encoding='utf-8') as f:
+    with open("./entity_link/session_5/peacok_linked_query_and_persona_test.json",'w',encoding='utf-8') as f:
         f.write(json.dumps(res, indent=4, ensure_ascii=False))
 
 if __name__ == "__main__":

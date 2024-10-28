@@ -40,6 +40,7 @@ the format of persona_triple_dict.json is
         ...
 }
 `
+
 You can also download the processed knowledge graph in this link [Link]()
 
 

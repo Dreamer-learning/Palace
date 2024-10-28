@@ -52,5 +52,13 @@ You can modify the file path in the code to point to the JSON files of the extra
 
 `python peacok_link.py`
 ## 3. Initialize representation 
+To accelerate training, we pre-store the vectors that need to be initialized as .npy files. After modifying the corresponding file paths, you can run get_npy.py to obtain the initial representations of the current query and context:
+
+`python get_npy.py`
+
+You can run get_npy_triples.py to get the initial representations of the nodes in the graph.
+
+`python get_npy_triples.py`
+
 
 ## 4. training

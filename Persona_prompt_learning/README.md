@@ -62,3 +62,6 @@ You can run get_npy_triples.py to get the initial representations of the nodes i
 
 
 ## 4. training
+After completing the above steps and obtaining the corresponding files, modify the file paths and run:
+
+·bash ppl.sh`

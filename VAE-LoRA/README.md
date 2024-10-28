@@ -1,3 +1,4 @@
 # VAE-LoRA
 You can run:
-`bash `
+
+`bash vae_lora.sh`

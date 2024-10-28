@@ -6,13 +6,16 @@ We follow the method in [Link](https://ojs.aaai.org/index.php/AAAI/article/view/
 You should extract all the persona triples from the defined personas, context, and current query, and place the corresponding generated JSON files in the `./entity_link` folder.
 
 the format of JSON files is :
+
 `  
 {
   "query/context/personas": <persona triples>
 }
 `
 ## 2. knowledge graph link
-You can run
+You can modify the file path in the code to point to the JSON files of the extracted persona triples and run:
+
+`python peacok_link.py`
 ## 3. Initialize representation 
 
 ## 4. training

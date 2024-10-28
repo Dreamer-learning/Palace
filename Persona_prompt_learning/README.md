@@ -13,6 +13,35 @@ the format of JSON files is :
 }
 `
 ## 2. knowledge graph link
+You need first to process the original knowledge graph file to generate the corresponding persona_triple.json and persona_triple_dict.json
+
+the format of persona_triple.json is 
+
+`
+[
+   [
+        "i am an actor who play my part", # entity
+        "characteristic", # relation
+        "complicent" # entity
+    ]
+]
+`
+
+the format of persona_triple_dict.json is 
+
+`
+{
+  "i am an actor who play my part": [ # entity
+        [
+            "characteristic", # relation
+            "complicent" # entity
+        ],
+        ...
+}
+`
+You can also download the processed knowledge graph in this link [Link]()
+
+
 You can modify the file path in the code to point to the JSON files of the extracted persona triples and run:
 
 `python peacok_link.py`

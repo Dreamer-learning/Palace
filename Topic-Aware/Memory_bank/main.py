@@ -94,5 +94,5 @@ if __name__ == '__main__':
                 res.append(tmp_data)
 
             output_path = args.output_dir + "/session_" + str(s) + "/" + mode + "_processed.json"
-            with open("/home/liudongshuo/new_agent/session_5/test_data_with_context_and_memory.json",'w',encoding='utf-8') as f:
+            with open("./session_5/test_data_with_context_and_memory.json",'w',encoding='utf-8') as f:
                 f.write(json.dumps(res, indent=4, ensure_ascii=False))

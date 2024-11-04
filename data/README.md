@@ -8,5 +8,7 @@ PeaCoK knowledge graph : [Link](https://github.com/Dreamer-learning/PALACE_Datas
 
 TIAGE Benchmark : [Link](https://arxiv.org/pdf/2109.04562)
 
-You can also download the processed dataset here : [Link](https://arxiv.org/pdf/2305.02364)
+You can run to get the processed dataset on different sessions from original dataset:
+`python data_process.py`
 
+You can also download the processed dataset here : [Link](https://arxiv.org/pdf/2305.02364)

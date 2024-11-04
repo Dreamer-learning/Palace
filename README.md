@@ -6,7 +6,7 @@ Thank you for your interest in our work.
 
 2. Then you need to run the `/Topic-Aware folder` to obtain the historical information from the dataset.
 
-3. Next, perform VAE-LORA training on different backbones, as detailed in the `VAE-LoRA` folder.
+3. Next, perform VAE-LoRA training on different backbones, as detailed in the `VAE-LoRA` folder.
 
 4. Finally, we train the persona prompt learning, which can be found in folder `\Persona_prompt_learning` 
 
